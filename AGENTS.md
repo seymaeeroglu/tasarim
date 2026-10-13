@@ -111,6 +111,7 @@ docs/
 
 - **Controller ince olur.** İş mantığı Controller'a yazılmaz; Application servislerine yazılır (ör. `SubmitComplaintService`, `SaveDoctorReviewService`).
 - Bağımlılık yönü: Web → Application → Domain. Infrastructure, Application'daki arayüzleri uygular. Domain hiçbir şeye bağımlı olmaz.
+- Web, Infrastructure'a **yalnızca** `Program.cs` içindeki `AddInfrastructure()` çağrısı için referans verir (composition root). Controller/View, Infrastructure türlerini kullanmaz. Kurallar `ArchitectureTests` ile denetlenir; yeni referans eklenirse test de güncellenir ve gerekçe yazılır.
 - Bir modül başka modülün tablolarını doğrudan değiştirmez; Application servisi üzerinden gider.
 - Entity'ler doğrudan View'a verilmez. ViewModel/DTO kullan.
 - Dış bağımlılıklar arayüz arkasında olur: `IComplaintAnalysisService`, `ISpeechTranscriptionService`, `IImageAnalysisService`, `IExternalIdentityProvider`, `IHealthRecordGateway`, `IPrescriptionGateway`, `INotificationSender`, `IFileStorage`.
