@@ -1,0 +1,15 @@
+@model ErrorViewModel
+@{
+    ViewData["Title"] = "Hata";
+}
+
+@* AGENTS.md §11: kullanıcıya teknik ayrıntı gösterilmez; yalnızca destek için takip kodu verilir. *@
+<h1 class="h3 text-danger">İşleminiz şu an tamamlanamadı.</h1>
+<p>Lütfen biraz sonra tekrar deneyin. Sorun sürerse aşağıdaki takip kodunu bildirin.</p>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Takip kodu:</strong> <code>@Model.RequestId</code>
+    </p>
+}

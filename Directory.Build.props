@@ -1,0 +1,9 @@
+<Project>
+  <!-- Bu dosya çözümdeki TÜM projelere otomatik uygulanır; ortak ayarlar tek yerde durur. -->
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Null uyarıları hata sayılır: "bilinmiyor" ile "yok" ayrımı gibi kurallarda null hatası sessiz kalmasın. -->
+    <WarningsAsErrors>nullable</WarningsAsErrors>
+  </PropertyGroup>
+</Project>

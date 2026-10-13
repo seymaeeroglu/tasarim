@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\TeletipAsistani.Application\TeletipAsistani.Application.csproj" />
+    <ProjectReference Include="..\TeletipAsistani.Infrastructure\TeletipAsistani.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
